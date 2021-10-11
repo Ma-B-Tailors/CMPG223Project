@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="payment.aspx.cs" Inherits="WebApplication4.payment" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="foward.aspx.cs" Inherits="WebApplication4.foward" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <style>
+      <style>
     * {
         box-sizing: border-box;
         margin: 0;
@@ -85,19 +85,46 @@ div .one{
         padding-right: 20px;
         
     }
+    .image2 img {
+        width: 200px;
+        height: 250px;
+    }
+    .image2{
+        padding-top: 65px;
+        padding-bottom: 120px;
+        padding-left: 100px;
+        align-content: center;
+    }
+    .footer{
+        padding-bottom: 80px;
+        padding-top: 80px;
+        text-align: center;
+        background-color: black;
+    }
+    footer {
+        padding-top: 120px;
+    }
+    .button1{
+        text-align: center;
+        padding-top: 15px;
+    }
+    .col{
+        margin-right: 25%;
+        padding-top: 40px;
+        padding-bottom: 50px;
+        padding-bottom: 50px;
 
-    .contain{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 4px;
-        width: 100%;
     }
-    .contain2 {
-        padding-left: -60px;
-        background-color: deepskyblue;
-        height: 100vh;
+    .col div{
+        float: right;
+        margin-right: 5%;
+        border: 1px inset gray;
+        padding: 10px;
+        background-color: honeydew;
+        
     }
-     @media (min-width: 769px) {
+
+    @media (min-width: 769px) {
         .header1,
         .main-nav {
             display: flex;
@@ -124,42 +151,8 @@ div .one{
             max-width: 100%;
         }
     }
-        .auto-style1 {
-            margin-top: 0;
-        }
-        .auto-style2 {
-            margin-left: 0px;
-        }
-               
-        .auto-style4 {
-            margin-bottom: 0;
-        }
-       
-        .auto-style6 {
-            text-align: center;
-        }
-       
-        .auto-style7 {
-            padding-left: -60px;
-            background-color: deepskyblue;
-            height: 100vh;
-        }
-       
-        .auto-style8 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 4px;
-            width: 100%;
-            height: 1498px;
-        }
-       
-        .auto-style9 {
-            width: 328px;
-            height: 40px;
-            border-radius: 13px;
-        }
-       
-        </style>
+  
+</style>
 </head>
 <body>
     <header class="header1">
@@ -171,22 +164,18 @@ div .one{
             <li><a href="/landing.html">Home</a></li>
             <li><a href="/Tailor.aspx">Become a Tailor</a></li>
             <li><a href="/WebForm1.aspx" class="btn btn-secondary">Customer</a></li>
-            <li><a href="/product.aspx">Login</a></li>
+            <li><a href="/Login.aspx">Login</a></li>
 
         </ul>
 
     </header>
     <form id="form1" runat="server">
         <div style="text-align: center">
-            <img src="https://cdn.hswstatic.com/gif/paypal-19.jpg"  style="width: 300px; height: 150px; margin-bottom: 10px"/>
-            <br />
-            <asp:Label ID="Label1" runat="server" Text="Enter your paypal account"></asp:Label>
-            <br />
-            <asp:TextBox ID="TextBox1" runat="server" Height="40px" Width="300px" style="margin-bottom: 10px"></asp:TextBox><br />
-             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" Height="40px" Width="300px" BackColor="#0000CC" ForeColor="White" />
+             <img src="https://cdn.icon-icons.com/icons2/933/PNG/512/round-account-button-with-user-inside_icon-icons.com_72596.png" style="width:150px;height:150px; margin-top: 15px; "/>
+            <h3>Check your details</h3>
         </div>
-
-       
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Check appointment" style="background-color: blue; color: white; width: 400px; height: 40px"/>
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Check Size" style="background-color: blue; color: white; width: 400px; height: 40px"/>
     </form>
 </body>
 </html>

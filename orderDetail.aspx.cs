@@ -21,6 +21,7 @@ namespace WebApplication4
       
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label1.Text = Session["Value1"].ToString();
             int tailor_id = new payment().Tailors2();
             int delivery_id = new payment().Delivery(); // Save the oder details values in the order detail table in our database but first we need to call our method from the above and other pages in order to make our code simple. we are re-using them
             int customer_id = new Appointment().Customer();
@@ -106,6 +107,38 @@ namespace WebApplication4
         protected void Button2_Click(object sender, EventArgs e)
         {
 
+            int order_id = Order_id();
+            
+            int customer_id = new Appointment().Customer();
+            com = new SqlConnection(con);
+            com.Open();
+            adap = new SqlDataAdapter();
+            string sss = "DELETE FROM payment WHERE customer_id='" + customer_id + "'; DELETE FROM Details WHERE order_id='" + order_id + "'; DELETE FROM orders WHERE customer_id='" + customer_id + "'; DELETE FROM delivery WHERE customer_id='" + customer_id + "'; DELETE FROM uniform_cart WHERE customer_id='" + customer_id + "'; DELETE FROM Size WHERE customer_id='" + customer_id + "'; DELETE FROM Appointment WHERE customer_id='" + customer_id + "'; DELETE FROM address WHERE customer_id='" + customer_id + "'; DELETE FROM customer WHERE customer_id='" + customer_id + "'";
+            comm = new SqlCommand(sss, com);
+            adap = new SqlDataAdapter();
+            adap.DeleteCommand = comm;
+            adap.DeleteCommand.ExecuteNonQuery();
+            com.Close();
+
+            Response.Redirect("landing.html");
+        }
+        
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            int order_id = Order_id();
+
+            int customer_id = new Appointment().Customer();
+            com = new SqlConnection(con);
+            com.Open();
+            adap = new SqlDataAdapter();
+            string sss = "DELETE FROM Appointment WHERE customer_id='" + customer_id + "'";
+            comm = new SqlCommand(sss, com);
+            adap = new SqlDataAdapter();
+            adap.DeleteCommand = comm;
+            adap.DeleteCommand.ExecuteNonQuery();
+            com.Close();
+
+            Response.Redirect("landing.html");
         }
     }
 }

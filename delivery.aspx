@@ -193,6 +193,8 @@ div .one{
             </div> 
         
         <div style="border-radius: 13px; text-align: center; padding: 10px; margin-top: 150px; margin-left: 6%">
+            <asp:Label ID="Label2" runat="server" ForeColor="#33CC33"></asp:Label>
+            <br />
         <asp:Button ID="Button4" runat="server" BackColor="#0000CC" ForeColor="White" Height="40px" Text="Continue to payment" Width="450px" OnClick="Button4_Click" />
                 </div>
         </div>

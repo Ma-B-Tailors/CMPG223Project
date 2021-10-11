@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="payment.aspx.cs" Inherits="WebApplication4.payment" %>
-
-<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm4.aspx.cs" Inherits="WebApplication4.WebForm4" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -85,19 +83,36 @@ div .one{
         padding-right: 20px;
         
     }
+    .image2 img {
+        width: 200px;
+        height: 250px;
+    }
+    .image2{
+        padding-top: 65px;
+        padding-bottom: 120px;
+        padding-left: 100px;
+        align-content: center;
+    }
+    .footer{
+        padding-bottom: 80px;
+        padding-top: 80px;
+        text-align: center;
+        background-color: black;
+    }
+    footer {
+        padding-top: 120px;
+    }
+    .button1{
+        text-align: center;
+        padding-top: 15px;
+    }
 
-    .contain{
+    .container{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 4px;
-        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 100px;
     }
-    .contain2 {
-        padding-left: -60px;
-        background-color: deepskyblue;
-        height: 100vh;
-    }
-     @media (min-width: 769px) {
+    @media (min-width: 769px) {
         .header1,
         .main-nav {
             display: flex;
@@ -124,42 +139,8 @@ div .one{
             max-width: 100%;
         }
     }
-        .auto-style1 {
-            margin-top: 0;
-        }
-        .auto-style2 {
-            margin-left: 0px;
-        }
-               
-        .auto-style4 {
-            margin-bottom: 0;
-        }
-       
-        .auto-style6 {
-            text-align: center;
-        }
-       
-        .auto-style7 {
-            padding-left: -60px;
-            background-color: deepskyblue;
-            height: 100vh;
-        }
-       
-        .auto-style8 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 4px;
-            width: 100%;
-            height: 1498px;
-        }
-       
-        .auto-style9 {
-            width: 328px;
-            height: 40px;
-            border-radius: 13px;
-        }
-       
-        </style>
+  
+</style>
 </head>
 <body>
     <header class="header1">
@@ -167,26 +148,47 @@ div .one{
             <a href="#">Call us(0797394470)</a>
         </h1>
         <ul class="main-nav" id="myTopnav">
-             <li><a href="/About.html">About</a></li>
+            <li><a href="/About.html">About</a></li>
             <li><a href="/landing.html">Home</a></li>
             <li><a href="/Tailor.aspx">Become a Tailor</a></li>
             <li><a href="/WebForm1.aspx" class="btn btn-secondary">Customer</a></li>
-            <li><a href="/product.aspx">Login</a></li>
+            <li><a href="/Login.aspx">Login</a></li>
 
         </ul>
 
     </header>
     <form id="form1" runat="server">
-        <div style="text-align: center">
-            <img src="https://cdn.hswstatic.com/gif/paypal-19.jpg"  style="width: 300px; height: 150px; margin-bottom: 10px"/>
+        <div class="container">
+        <div>
+            <img src="https://cdn.icon-icons.com/icons2/933/PNG/512/round-account-button-with-user-inside_icon-icons.com_72596.png" style="width:150px;height:150px"/>
             <br />
-            <asp:Label ID="Label1" runat="server" Text="Enter your paypal account"></asp:Label>
-            <br />
-            <asp:TextBox ID="TextBox1" runat="server" Height="40px" Width="300px" style="margin-bottom: 10px"></asp:TextBox><br />
-             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" Height="40px" Width="300px" BackColor="#0000CC" ForeColor="White" />
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+             <br />
+            <asp:Button ID="Button4" runat="server" Text="Button" Width="262px" />
+             <br />
+           
         </div>
 
+         <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/942/942810.png" style="width:150px;height:150px"/>
+             <h3>Delete your Appointment now</h3>
+             <p>
+                 <asp:Button ID="Button5" runat="server" Text="Button" Width="262px" />
+             </p>
+
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/942/942810.png" style="width:150px;height:150px"/>
+             <h3>Delete your payment now</h3>
+            <p>
+                <asp:Button ID="Button6" runat="server" Text="Button" Width="262px" />
+            </p>
+        </div>
+            </div>
        
+       
+        <p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

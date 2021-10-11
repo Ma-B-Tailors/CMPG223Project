@@ -71,6 +71,7 @@
     <Content Include="Appointment.aspx" />
     <Content Include="delete.aspx" />
     <Content Include="delivery.aspx" />
+    <Content Include="foward.aspx" />
     <Content Include="landing.html" />
     <Content Include="landingLogedIn.html" />
     <Content Include="Login.aspx" />
@@ -82,11 +83,15 @@
     <Content Include="root\css\landing.css" />
     <Content Include="Size.aspx" />
     <Content Include="Tailor.aspx" />
+    <Content Include="Tailornav.aspx" />
     <Content Include="Uniform_cart.aspx" />
+    <Content Include="ViewAppointment.aspx" />
+    <Content Include="ViewAppointment2.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
     <Content Include="WebForm3.aspx" />
+    <Content Include="WebForm4.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Appointment.aspx.cs">
@@ -109,6 +114,13 @@
     </Compile>
     <Compile Include="delivery.aspx.designer.cs">
       <DependentUpon>delivery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="foward.aspx.cs">
+      <DependentUpon>foward.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="foward.aspx.designer.cs">
+      <DependentUpon>foward.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -167,12 +179,33 @@
     <Compile Include="Tailor.aspx.designer.cs">
       <DependentUpon>Tailor.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tailornav.aspx.cs">
+      <DependentUpon>Tailornav.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tailornav.aspx.designer.cs">
+      <DependentUpon>Tailornav.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Uniform_cart.aspx.cs">
       <DependentUpon>Uniform_cart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Uniform_cart.aspx.designer.cs">
       <DependentUpon>Uniform_cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAppointment.aspx.cs">
+      <DependentUpon>ViewAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAppointment.aspx.designer.cs">
+      <DependentUpon>ViewAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAppointment2.aspx.cs">
+      <DependentUpon>ViewAppointment2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAppointment2.aspx.designer.cs">
+      <DependentUpon>ViewAppointment2.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
@@ -194,6 +227,13 @@
     </Compile>
     <Compile Include="WebForm3.aspx.designer.cs">
       <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm4.aspx.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm4.aspx.designer.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

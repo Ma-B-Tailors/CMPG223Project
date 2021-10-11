@@ -20,7 +20,11 @@ namespace WebApplication4
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Value1"] == null)
+            {
+                Response.Redirect("Login.aspx");
 
+            }
         }
 
         public int Product_id() // get the product id from thee uniform cart in order to be able to save it in the order table 
@@ -111,8 +115,27 @@ namespace WebApplication4
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int customer_id = new Appointment().Customer();
+                com = new SqlConnection(con);
+                com.Open();
+                string sss = $"INSERT INTO payment(email, customer_id) VALUES('{TextBox1.Text}', '{customer_id}')";
+                comm = new SqlCommand(sss, com);
+                ds = new DataSet();
+                adap = new SqlDataAdapter();
+                adap.InsertCommand = comm;
+                adap.InsertCommand.ExecuteNonQuery();
+                com.Close();
 
-            Response.Redirect("orderDetail.aspx"); // take the user to the page where they will be able to view their order
+                Response.Redirect("orderDetail.aspx"); // take the user to the page where they will be able to view their order
+            }
+
+            catch
+            {
+                Console.WriteLine("Error processing Table to the gridview");
+            }
+           
         }
         
    

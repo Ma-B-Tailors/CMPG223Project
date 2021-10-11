@@ -147,7 +147,6 @@ namespace WebApplication4
         public int Address()
         {
             int houseNumber = int.Parse(TextBox7.Text);
-            String name_of_customer = Session["Value1"].ToString();
             int address = 0;
             int customer_id = Customer();
             com = new SqlConnection(con);

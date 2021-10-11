@@ -87,6 +87,8 @@ namespace WebApplication4
                 adap.InsertCommand = comm;
                 adap.InsertCommand.ExecuteNonQuery();
                 com.Close();
+
+                Label2.Text = "Address successfully confirmed, you may proceed";
             }
 
             catch

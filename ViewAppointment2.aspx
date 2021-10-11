@@ -1,11 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="payment.aspx.cs" Inherits="WebApplication4.payment" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewAppointment2.aspx.cs" Inherits="WebApplication4.ViewAppointment2" %>
+
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <style>
+     <style>
     * {
         box-sizing: border-box;
         margin: 0;
@@ -124,41 +125,7 @@ div .one{
             max-width: 100%;
         }
     }
-        .auto-style1 {
-            margin-top: 0;
-        }
-        .auto-style2 {
-            margin-left: 0px;
-        }
                
-        .auto-style4 {
-            margin-bottom: 0;
-        }
-       
-        .auto-style6 {
-            text-align: center;
-        }
-       
-        .auto-style7 {
-            padding-left: -60px;
-            background-color: deepskyblue;
-            height: 100vh;
-        }
-       
-        .auto-style8 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 4px;
-            width: 100%;
-            height: 1498px;
-        }
-       
-        .auto-style9 {
-            width: 328px;
-            height: 40px;
-            border-radius: 13px;
-        }
-       
         </style>
 </head>
 <body>
@@ -178,14 +145,11 @@ div .one{
     </header>
     <form id="form1" runat="server">
         <div style="text-align: center">
-            <img src="https://cdn.hswstatic.com/gif/paypal-19.jpg"  style="width: 300px; height: 150px; margin-bottom: 10px"/>
-            <br />
-            <asp:Label ID="Label1" runat="server" Text="Enter your paypal account"></asp:Label>
-            <br />
-            <asp:TextBox ID="TextBox1" runat="server" Height="40px" Width="300px" style="margin-bottom: 10px"></asp:TextBox><br />
-             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" Height="40px" Width="300px" BackColor="#0000CC" ForeColor="White" />
-        </div>
+            <asp:GridView ID="GridView1" runat="server" Height="208px" Width="311px">
+            </asp:GridView>
 
+         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" style="background-color: blue; color: white; width: 400px; height: 40px"/>
+        </div>
        
     </form>
 </body>

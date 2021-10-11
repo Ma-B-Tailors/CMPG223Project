@@ -24,7 +24,7 @@ namespace WebApplication4
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Session["Value1"] = TextBox1.Text;
+            Session["Value2"] = TextBox1.Text;
 
             try
             {
@@ -38,7 +38,7 @@ namespace WebApplication4
                 {
                     if (big[1].ToString() == TextBox1.Text && big[4].ToString() == TextBox4.Text)
                     {
-                        Response.Redirect("landing.html");
+                        Response.Redirect("foward.aspx");
                     }
                     else
                     {
@@ -98,5 +98,7 @@ namespace WebApplication4
                 Console.WriteLine("Error occured while checking the existance of the user");
             }
         }
+
+        
     }
 }
